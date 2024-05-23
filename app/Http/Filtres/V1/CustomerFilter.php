@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Services\V1;
+namespace App\Http\Filtres\V1;
 
 use Illuminate\Http\Request;
 
-class CustomerQuery {
+class CustomerFilter extends ApiFilter {
 
     // les operqtions acceptes dans les requetes pour chaque column
     protected $safeParams = [
@@ -24,11 +24,4 @@ class CustomerQuery {
         'gt' => '>',
         'lt' => '<',
     ];
-
-
-    public function transform(Request $request){
-        $finalQuery = [];
-        
-        return $finalQuery;
-    }
 }
